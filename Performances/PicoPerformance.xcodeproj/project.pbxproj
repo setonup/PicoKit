@@ -188,11 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAC422A16EC3A500032CDFC /* Build configuration list for PBXNativeTarget "PicoPerformance" */;
 			buildPhases = (
+				8F5DA24D37D4C0796B63BE88 /* [CP] Check Pods Manifest.lock */,
 				64FB1CB2FEC5024E8EAB6357 /* Check Pods Manifest.lock */,
 				CEAC41F616EC3A500032CDFC /* Sources */,
 				CEAC41F716EC3A500032CDFC /* Frameworks */,
 				CEAC41F816EC3A500032CDFC /* Resources */,
-				E4AFFBFDD2274D087C64128F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,12 +211,18 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Leansoft;
+				TargetAttributes = {
+					CEAC41F916EC3A500032CDFC = {
+						DevelopmentTeam = S64PT28TCG;
+					};
+				};
 			};
 			buildConfigurationList = CEAC41F416EC3A500032CDFC /* Build configuration list for PBXProject "PicoPerformance" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CEAC41EF16EC3A500032CDFC;
@@ -266,19 +272,26 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E4AFFBFDD2274D087C64128F /* Copy Pods Resources */ = {
+		8F5DA24D37D4C0796B63BE88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicoPerformance-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicoPerformance/Pods-PicoPerformance-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -369,15 +382,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = PicoPerformance/Entitlements.plist;
+				DEVELOPMENT_TEAM = S64PT28TCG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicoPerformance/PicoPerformance-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "PicoPerformance/PicoPerformance-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"/Users/user/Library/Developer/Xcode/DerivedData/pico-flaiacivepfbdbamtajfyrqsjxae/Build/Products/Debug-iphoneos\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leansoft.PicoPerformanceSetonup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../Pico/PicoSource/**";
 				WRAPPER_EXTENSION = app;
@@ -391,15 +406,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = PicoPerformance/Entitlements.plist;
+				DEVELOPMENT_TEAM = S64PT28TCG;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicoPerformance/PicoPerformance-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "PicoPerformance/PicoPerformance-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"/Users/user/Library/Developer/Xcode/DerivedData/pico-flaiacivepfbdbamtajfyrqsjxae/Build/Products/Debug-iphoneos\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leansoft.PicoPerformanceSetonup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../Pico/PicoSource/**";
 				WRAPPER_EXTENSION = app;
